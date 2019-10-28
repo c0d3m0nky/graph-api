@@ -1,14 +1,13 @@
-﻿using Microsoft.IdentityModel.Clients.ActiveDirectory;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using AADB2C.GraphApi.Models;
+using Microsoft.IdentityModel.Clients.ActiveDirectory;
 
-namespace AADB2C.GraphApi
+namespace AADB2C.GraphApi.GraphClient
 {
     public class AzureADGraphClient
     {
@@ -49,8 +48,7 @@ namespace AADB2C.GraphApi
                 url += "&" + query;
             }
 
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine($"\r\nGraph URL: {url}");
+            Log.Info($"\r\nGraph URL: {url}");
             Console.ResetColor();
 
             return url;
@@ -127,8 +125,7 @@ namespace AADB2C.GraphApi
             }
             catch (Exception ex)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(ex.Message);
+                Log.Error(ex.Message);
                 Console.ResetColor();
 
                 throw;

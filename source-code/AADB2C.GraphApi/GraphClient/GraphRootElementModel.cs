@@ -1,9 +1,6 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace AADB2C.GraphApi.Models
+namespace AADB2C.GraphApi.GraphClient
 {
     public class GraphRootElementModel
     {

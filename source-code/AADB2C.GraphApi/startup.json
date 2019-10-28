@@ -1,0 +1,7 @@
+﻿{
+  "AppSettings": {
+    "pageSize": 200,
+    "outputFolder": "~/azureUserManagement",
+    "credentials": "~/.azuregraph.json"
+  }
+}
